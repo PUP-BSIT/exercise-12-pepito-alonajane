@@ -1,48 +1,48 @@
 let timer;
 let count = 0;
 const countDisplay = document.getElementById("count");
-const startBtn = document.getElementById("startBtn");
-const pauseBtn = document.getElementById("pauseBtn");
-const resumeBtn = document.getElementById("resumeBtn");
-const stopBtn = document.getElementById("stopBtn");
+const start_btn = document.getElementById("start_btn");
+const pause_btn = document.getElementById("pause_btn");
+const resume_btn = document.getElementById("resume_btn");
+const stop_btn = document.getElementById("stop_btn");
 
-startBtn.addEventListener("click", startTimer);
-pauseBtn.addEventListener("click", pauseTimer);
-resumeBtn.addEventListener("click", resumeTimer);
-stopBtn.addEventListener("click", stopTimer);
+start_btn.addEventListener("click", startTimer);
+pause_btn.addEventListener("click", pauseTimer);
+resume_btn.addEventListener("click", resumeTimer);
+stop_btn.addEventListener("click", stopTimer);
 
 function startTimer() {
   timer = setInterval(updateCount, 1000);
-  startBtn.disabled = true;
-  pauseBtn.disabled = false;
-  resumeBtn.disabled = true;
-  stopBtn.disabled = false;
+  start_btn.disabled = true;
+  pause_btn.disabled = false;
+  resume_btn.disabled = true;
+  stop_btn.disabled = false;
 }
 
 function pauseTimer() {
   clearInterval(timer);
-  startBtn.disabled = true;
-  pauseBtn.disabled = true;
-  resumeBtn.disabled = false;
-  stopBtn.disabled = false;
+  start_btn.disabled = true;
+  pause_btn.disabled = true;
+  resume_btn.disabled = false;
+  stop_btn.disabled = false;
 }
 
 function resumeTimer() {
   timer = setInterval(updateCount, 1000);
-  startBtn.disabled = true;
-  pauseBtn.disabled = false;
-  resumeBtn.disabled = true;
-  stopBtn.disabled = false;
+  start_btn.disabled = true;
+  pause_btn.disabled = false;
+  resume_btn.disabled = true;
+  stop_btn.disabled = false;
 }
 
 function stopTimer() {
   clearInterval(timer);
   count = 0;
   countDisplay.innerText = count;
-  startBtn.disabled = false;
-  pauseBtn.disabled = true;
-  resumeBtn.disabled = true;
-  stopBtn.disabled = true;
+  start_btn.disabled = false;
+  pause_btn.disabled = true;
+  resume_btn.disabled = true;
+  stop_btn.disabled = true;
 }
 
 function updateCount() {
