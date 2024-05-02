@@ -1,0 +1,14 @@
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+  
+.container {
+    text-align: center;
+    margin-top: 60px;
+}
+  
+#count {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+  
